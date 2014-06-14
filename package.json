@@ -1,0 +1,28 @@
+{
+  "name": "tickle",
+  "version": "0.0.1",
+  "description": "request counter for nodejs",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hex7c0/tickle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hex7c0/tickle/issues"
+  },
+  "author": {
+    "name": "hex7c0",
+    "email": "hex7c0@gmail.com",
+    "url": "http://hex7c0.tk/"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">0.6.0"
+  },
+  "keywords": [
+    "counter",
+    "request"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://github.com/hex7c0/tickle/"
+}
