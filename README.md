@@ -1,6 +1,6 @@
 #tickle [![Build Status](https://travis-ci.org/hex7c0/tickle.svg?branch=master)](https://travis-ci.org/hex7c0/tickle) [![NPM version](https://badge.fury.io/js/tickle.svg)](http://badge.fury.io/js/tickle)
 
-request counter for [nodejs](http://nodejs.org)
+request counter for [nodejs](http://nodejs.org), indipendent for every route
 
 ## Installation
 

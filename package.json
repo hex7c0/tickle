@@ -1,6 +1,6 @@
 {
   "name": "tickle",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "request counter for nodejs",
   "main": "index.js",
   "repository": {
