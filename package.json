@@ -1,6 +1,6 @@
 {
   "name": "tickle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "request counter for nodejs",
   "main": "index.js",
   "repository": {
@@ -16,6 +16,10 @@
     "url": "http://hex7c0.tk/"
   },
   "dependencies": {},
+  "devDependencies": {
+    "express": ">4.4.0",
+    "hapi": ">6.0.0"
+  },
   "engines": {
     "node": ">0.6.0"
   },
