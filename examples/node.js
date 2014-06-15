@@ -26,6 +26,16 @@ try {
  */
 http.createServer(function(req,res) {
 
-    res.end('counter=' + tickle(req));
+    var counter = tickle(req);
+    res.end('counter=' + counter);
+
+    // start testing ab benchmark
+    if (counter == 1) {
+        GLOBAL.tickle.tpr();
+    }
+    if (counter == 3001) {
+        console.log('time per request ' + GLOBAL.tickle.tpr())
+    }
+    // end testing ab benchmark
 }).listen(3000,'127.0.0.1');
 console.log('starting "hello world" on port 3000');
