@@ -1,6 +1,6 @@
 {
   "name": "tickle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "request counter for nodejs",
   "main": "index.js",
   "repository": {
@@ -17,8 +17,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "express": ">4.4.0",
-    "hapi": ">6.0.0"
+    "express": ">4.4.0"
   },
   "engines": {
     "node": ">0.6.0"

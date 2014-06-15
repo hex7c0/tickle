@@ -16,7 +16,30 @@ git clone git://github.com/hex7c0/tickle.git
 
 ## API
 
+inside expressjs project
+```js
+var tickle = require('tickle');
+var app = require('express')();
 
+app.use(tickle);
+```
+
+#### Class is stored inside _GLOBAL_ var
+
+reset all counter
+```js
+GLOBAL.tickle.reset();
+```
+
+get time per request
+```js
+GLOBAL.tickle.tpr();
+```
+
+routing information are stored inside an **Object**
+```js
+GLOBAL.tickle.route;
+```
 
 #### Examples
 
