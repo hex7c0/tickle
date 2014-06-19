@@ -1,7 +1,7 @@
 "use strict";
 /**
  * @file nodejs example
- * @package tickle
+ * @module tickle
  * @package tickle
  * @subpackage examples
  * @version 0.0.1

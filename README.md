@@ -24,7 +24,7 @@ var app = require('express')();
 app.use(tickle);
 ```
 
-#### Class is stored inside _GLOBAL_ var
+##### Class is stored inside _GLOBAL_ var
 
 reset all counter
 ```js
