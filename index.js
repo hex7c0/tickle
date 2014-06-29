@@ -4,7 +4,7 @@
  * @module tickle
  * @package tickle
  * @subpackage main
- * @version 1.0.2
+ * @version 1.0.3
  * @author hex7c0 <hex7c0@gmail.com>
  * @copyright hex7c0 2014
  * @license GPLv3
@@ -14,14 +14,14 @@
  * initialize module
  */
 if (!GLOBAL.tickle) {
-    GLOBAL.tickle = new tickle;
+    GLOBAL.tickle = new TICKLE;
     /**
      * reset all routing counter
      * 
      * @function reset
      * @return
      */
-    tickle.prototype.reset = function() {
+    TICKLE.prototype.reset = function() {
 
         this.all = 0;
         var route = this.route;
@@ -37,7 +37,7 @@ if (!GLOBAL.tickle) {
      * @param {String} path - url path
      * @return {Integer}
      */
-    tickle.prototype.add = function(path) {
+    TICKLE.prototype.add = function(path) {
 
         ++this.all;
         var plus = ++this.route[path];
@@ -52,7 +52,7 @@ if (!GLOBAL.tickle) {
      * @function tpr
      * @return {Float}
      */
-    tickle.prototype.tpr = function() {
+    TICKLE.prototype.tpr = function() {
 
         var time = this.time;
         var diff = process.hrtime(time[0]);
@@ -68,25 +68,25 @@ if (!GLOBAL.tickle) {
 /**
  * tickle class
  * 
- * @class tickle
+ * @class TICKLE
  */
-function tickle() {
+function TICKLE() {
 
     this.all = 0;
     this.time = [process.hrtime(),0];
     this.route = {};
 };
 /**
- * body
+ * main
  * 
- * @exports main
- * @function main
+ * @exports tickle
+ * @function tickle
  * @param {Object} req - client request
  * @param {Object} [res] - response to client
  * @param {next} [next] - continue routes
  * @return {Integer|Functions}
  */
-module.exports = function(req,res,next) {
+module.exports = function tickle(req,res,next) {
 
     var globo = GLOBAL.tickle;
     req.tickle = globo.add(req.url);
