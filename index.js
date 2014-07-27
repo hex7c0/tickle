@@ -4,7 +4,7 @@
  * @module tickle
  * @package tickle
  * @subpackage main
- * @version 1.0.4
+ * @version 1.1.0
  * @author hex7c0 <hex7c0@gmail.com>
  * @copyright hex7c0 2014
  * @license GPLv3
@@ -31,6 +31,7 @@ function TICKLE() {
     this.time = [process.hrtime(),0];
     this.route = Object.create(null);
 }
+
 /**
  * reset all routing counter
  * 
@@ -89,8 +90,7 @@ TICKLE.prototype.tpr = function() {
  */
 module.exports = function tickle(req,res,next) {
 
-    var globo = GLOBAL.tickle;
-    req.tickle = globo.add(req.url);
+    req.tickle = GLOBAL.tickle.add(req.url);
     try {
         return next();
     } catch (TypeError) {
