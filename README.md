@@ -1,6 +1,9 @@
-#tickle [![Build Status](https://travis-ci.org/hex7c0/tickle.svg?branch=master)](https://travis-ci.org/hex7c0/tickle) [![NPM version](https://badge.fury.io/js/tickle.svg)](http://badge.fury.io/js/tickle)
+# [tickle](https://github.com/hex7c0/tickle)
+[![NPM version](https://badge.fury.io/js/tickle.svg)](http://badge.fury.io/js/tickle)
+[![Build Status](https://travis-ci.org/hex7c0/tickle.svg?branch=master)](https://travis-ci.org/hex7c0/tickle)
+[![devDependency Status](https://david-dm.org/hex7c0/tickle/dev-status.svg)](https://david-dm.org/hex7c0/tickle#info=devDependencies)
 
-request counter for [nodejs](http://nodejs.org), indipendent for every route
+Request counter for [nodejs](http://nodejs.org), indipendent for every route.
 
 ## Installation
 
@@ -30,12 +33,10 @@ reset all counter
 ```js
 GLOBAL.tickle.reset();
 ```
-
 get time per request
 ```js
 GLOBAL.tickle.tpr();
 ```
-
 routing information are stored inside an **Object**
 ```js
 GLOBAL.tickle.route;
