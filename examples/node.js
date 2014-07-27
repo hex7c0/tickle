@@ -14,7 +14,7 @@
  */
 // import
 try {
-    var tickle = require('../index.js'); // use require('tickle') instead
+    var tickle = require('../index.min.js'); // use require('tickle') instead
     var http = require('http');
 } catch (MODULE_NOT_FOUND) {
     console.error(MODULE_NOT_FOUND);
@@ -34,7 +34,7 @@ http.createServer(function(req,res) {
         GLOBAL.tickle.tpr();
     }
     if (counter == 3001) {
-        console.log('time per request ' + GLOBAL.tickle.tpr())
+        console.log('time per request ' + GLOBAL.tickle.tpr());
     }
     // end testing ab benchmark
 }).listen(3000,'127.0.0.1');

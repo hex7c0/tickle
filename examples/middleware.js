@@ -14,7 +14,7 @@
  */
 // import
 try {
-    var tickle = require('../index.js'); // use require('tickle') instead
+    var tickle = require('../index.min.js'); // use require('tickle') instead
     var app = require('express')();
 } catch (MODULE_NOT_FOUND) {
     console.error(MODULE_NOT_FOUND);
