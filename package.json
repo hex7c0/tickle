@@ -1,6 +1,6 @@
 {
   "name": "tickle",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "request counter for nodejs",
   "main": "index.js",
   "repository": {
@@ -15,12 +15,23 @@
     "email": "hex7c0@gmail.com",
     "url": "http://hex7c0.tk/"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "express": "4.6.X"
+    "express": "~4.7.1",
+    "mocha": "~1.21.0",
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-uglify": "0.5.0",
+    "load-grunt-tasks": "~0.6.0",
+    "supertest": "~0.13.0"
   },
   "engines": {
-    "node": ">0.6.0"
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "prepublish": "npm prune",
+    "test": "mocha --bail --check-leaks test/"
   },
   "keywords": [
     "counter",
