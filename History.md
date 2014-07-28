@@ -7,6 +7,7 @@ v1.1.0 / 2014-07-27
   * Testing script will be put inside "test/"
   * ".npmignore" more aggressive
   * `uglify` compiles
+  * `jsdoc` documentation
 
 v1.0.4 / 2014-07-25
 ==================
