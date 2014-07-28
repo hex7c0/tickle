@@ -1,42 +1,47 @@
 {
+  "version": "1.1.1",
   "name": "tickle",
-  "version": "1.1.0",
   "description": "request counter for nodejs",
-  "main": "index.min.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/hex7c0/tickle.git"
-  },
-  "bugs": {
-    "url": "https://github.com/hex7c0/tickle/issues"
-  },
+  "keywords": [
+    "counter",
+    "request"
+  ],
+  "preferGlobal": false,
+  "homepage": "https://github.com/hex7c0/tickle/",
   "author": {
     "name": "hex7c0",
     "email": "hex7c0@gmail.com",
     "url": "http://hex7c0.tk/"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hex7c0/tickle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hex7c0/tickle/issues",
+    "email": "hex7c0@gmail.com"
+  },
+  "directories":{
+    "doc":"./doc",
+    "lib":"./lib"
+  },
+  "main": "index.min.js",
   "dependencies": {
   },
   "devDependencies": {
-    "express": "~4.7.1",
-    "mocha": "~1.21.0",
-    "grunt": "~0.4.5",
-    "grunt-contrib-clean": "~0.5.0",
+    "express": "~4.7.2",
+    "mocha": "~1.21.3",
+    "grunt-contrib-clean": "0.5.0",
     "grunt-contrib-uglify": "0.5.0",
-    "load-grunt-tasks": "~0.6.0",
+    "grunt-shell": "~0.7.0",
     "supertest": "~0.13.0"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=0.10"
   },
   "scripts": {
     "prepublish": "npm prune",
     "test": "mocha --bail --check-leaks test/"
   },
-  "keywords": [
-    "counter",
-    "request"
-  ],
-  "license": "GPLv3",
-  "homepage": "https://github.com/hex7c0/tickle/"
+  "license": "GPLv3"
 }
