@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.1.2",
   "name": "tickle",
   "description": "request counter for nodejs",
   "keywords": [
@@ -7,7 +7,7 @@
     "request"
   ],
   "preferGlobal": false,
-  "homepage": "https://github.com/hex7c0/tickle/",
+  "homepage": "http://supergiovane.tk/#/tickle",
   "author": {
     "name": "hex7c0",
     "email": "hex7c0@gmail.com",
@@ -22,8 +22,7 @@
     "email": "hex7c0@gmail.com"
   },
   "directories":{
-    "doc":"./doc",
-    "lib":"./lib"
+    "doc":"./doc"
   },
   "main": "index.min.js",
   "dependencies": {
