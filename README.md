@@ -16,6 +16,10 @@ or
 ```
 git clone git://github.com/hex7c0/tickle.git
 ```
+or
+```
+http://supergiovane.tk/#/tickle
+```
 
 ## API
 
