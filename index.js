@@ -4,7 +4,7 @@
  * @module tickle
  * @package tickle
  * @subpackage main
- * @version 1.1.2
+ * @version 1.1.4
  * @author hex7c0 <hex7c0@gmail.com>
  * @copyright hex7c0 2014
  * @license GPLv3
@@ -28,7 +28,7 @@ if (!GLOBAL.tickle) {
 function TICKLE() {
 
     this.all = 0;
-    this.time = [process.hrtime(),0];
+    this.time = [ process.hrtime(), 0 ];
     this.route = Object.create(null);
 }
 
@@ -73,7 +73,7 @@ TICKLE.prototype.tpr = function() {
     var time = this.time;
     var diff = process.hrtime(time[0]);
     var all = this.all;
-    this.time = [process.hrtime(),all];
+    this.time = [ process.hrtime(), all ];
     return ((diff[0] * 1e9 + diff[1]) / 1000000) / (all - time[1]);
 };
 
@@ -87,12 +87,11 @@ TICKLE.prototype.tpr = function() {
  * @param {next} [next] - continue routes
  * @return {Integer|Functions}
  */
-module.exports = function tickle(req,res,next) {
+module.exports = function tickle(req, res, next) {
 
     req.tickle = GLOBAL.tickle.add(req.url);
-    try {
+    if (next) {
         return next();
-    } catch (TypeError) {
-        return req.tickle;
     }
+    return req.tickle;
 };
