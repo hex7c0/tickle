@@ -1,5 +1,5 @@
 {
-  "version": "1.1.4",
+  "version": "1.1.5",
   "name": "tickle",
   "description": "request counter",
   "keywords": [
@@ -32,6 +32,7 @@
     "mocha": "~1.21.4",
     "grunt-contrib-clean": "~0.6.0",
     "grunt-contrib-uglify": "~0.5.1",
+    "grunt-endline": "~0.2.0",
     "grunt-shell": "~1.0.1",
     "supertest": "~0.13.0"
   },
