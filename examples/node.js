@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /**
  * @file nodejs example
  * @module tickle
