@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 /**
  * @file tickle main
  * @module tickle
