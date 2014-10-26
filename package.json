@@ -1,5 +1,5 @@
 {
-  "version": "1.1.6",
+  "version": "1.1.7",
   "name": "tickle",
   "description": "request counter",
   "keywords": [
@@ -25,10 +25,11 @@
   "dependencies": {
   },
   "devDependencies": {
-    "express": "~4.9",
-    "mocha": "~1.21",
+    "express": "~4.10",
+    "mocha": "~2.0",
     "grunt-contrib-clean": "~0.6",
     "grunt-contrib-uglify": "~0.6",
+    "grunt-contrib-jshint": "~0.10",
     "grunt-endline": "~0.2",
     "supertest": "~0.13"
   },
