@@ -4,7 +4,7 @@
  * @module tickle
  * @package tickle
  * @subpackage main
- * @version 1.1.4
+ * @version 1.1.0
  * @author hex7c0 <hex7c0@gmail.com>
  * @copyright hex7c0 2014
  * @license GPLv3
@@ -14,7 +14,7 @@
  * initialize module
  */
 if (!GLOBAL.tickle) {
-    GLOBAL.tickle = new TICKLE;
+    GLOBAL.tickle = new TICKLE();
 }
 
 /*
@@ -87,11 +87,12 @@ TICKLE.prototype.tpr = function() {
  * @param {next} [next] - continue routes
  * @return {Integer|Functions}
  */
-module.exports = function tickle(req, res, next) {
+function tickle(req, res, next) {
 
     req.tickle = GLOBAL.tickle.add(req.url);
     if (next) {
         return next();
     }
     return req.tickle;
-};
+}
+module.exports = tickle;
