@@ -90,9 +90,6 @@ TICKLE.prototype.tpr = function() {
 function tickle(req, res, next) {
 
   req.tickle = global.tickle.add(req.url);
-  if (next) {
-    return next();
-  }
-  return req.tickle;
+  return next !== undefined ? next() : req.tickle;
 }
 module.exports = tickle;
