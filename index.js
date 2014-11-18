@@ -40,10 +40,7 @@ function TICKLE() {
 TICKLE.prototype.reset = function() {
 
   this.all = 0;
-  var route = this.route;
-  for ( var property in route) {
-    route[property] = 0;
-  }
+  this.route = Object.create(null);
   return;
 };
 /**
