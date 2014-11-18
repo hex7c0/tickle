@@ -52,6 +52,7 @@ describe('middleware', function() {
 
       if (err)
         throw err;
+      assert.equal(global.tickle.all, 1);
       assert.equal(Number(res.text), 1);
       done();
     });
@@ -62,6 +63,7 @@ describe('middleware', function() {
 
       if (err)
         throw err;
+      assert.equal(global.tickle.all, 2);
       assert.equal(isNaN(res.text), false);
       done();
     });
@@ -71,10 +73,12 @@ describe('middleware', function() {
 
     it('"/" - 1°', function(done) {
 
+      assert.equal(global.tickle.all, 2); // before add
       request(app).get('/').expect(200, done);
     });
     it('"/" - should return 2 with `add`', function(done) {
 
+      assert.equal(global.tickle.all, 3); // before add
       assert.equal(global.tickle.add('/'), 2);
       done();
     });
@@ -84,12 +88,14 @@ describe('middleware', function() {
 
         if (err)
           throw err;
+        assert.equal(global.tickle.all, 5);
         assert.equal(Number(res.text), 3);
         done();
       });
     });
     it('"/" - 4°', function(done) {
 
+      assert.equal(global.tickle.all, 5); // before add
       request(app).get('/').expect(200, done);
     });
     it('"/" - should return 5', function(done) {
@@ -98,7 +104,25 @@ describe('middleware', function() {
 
         if (err)
           throw err;
+        assert.equal(global.tickle.all, 7);
         assert.equal(Number(res.text), 5);
+        done();
+      });
+    });
+    it('should return 7 times', function(done) {
+
+      assert.equal(global.tickle.all, 7);
+      assert.equal(global.tickle.reset(), null);
+      done();
+    });
+    it('"/admin" - should return `tpr()` after reset', function(done) {
+
+      request(app).get('/admin').expect(200).end(function(err, res) {
+
+        if (err)
+          throw err;
+        assert.equal(global.tickle.all, 1);
+        assert.equal(isNaN(res.text), false);
         done();
       });
     });
