@@ -14,7 +14,7 @@
  * initialize module
  */
 if (!GLOBAL.tickle) {
-    GLOBAL.tickle = new TICKLE();
+  GLOBAL.tickle = new TICKLE();
 }
 
 /*
@@ -27,9 +27,9 @@ if (!GLOBAL.tickle) {
  */
 function TICKLE() {
 
-    this.all = 0;
-    this.time = [ process.hrtime(), 0 ];
-    this.route = Object.create(null);
+  this.all = 0;
+  this.time = [ process.hrtime(), 0 ];
+  this.route = Object.create(null);
 }
 
 /**
@@ -39,12 +39,12 @@ function TICKLE() {
  */
 TICKLE.prototype.reset = function() {
 
-    this.all = 0;
-    var route = this.route;
-    for ( var property in route) {
-        route[property] = 0;
-    }
-    return;
+  this.all = 0;
+  var route = this.route;
+  for ( var property in route) {
+    route[property] = 0;
+  }
+  return;
 };
 /**
  * increase counter
@@ -55,12 +55,12 @@ TICKLE.prototype.reset = function() {
  */
 TICKLE.prototype.add = function(path) {
 
-    ++this.all;
-    var plus = ++this.route[path];
-    if (!plus) {
-        plus = this.route[path] = 1;
-    }
-    return plus;
+  ++this.all;
+  var plus = ++this.route[path];
+  if (!plus) {
+    plus = this.route[path] = 1;
+  }
+  return plus;
 };
 /**
  * time per request
@@ -70,11 +70,11 @@ TICKLE.prototype.add = function(path) {
  */
 TICKLE.prototype.tpr = function() {
 
-    var time = this.time;
-    var diff = process.hrtime(time[0]);
-    var all = this.all;
-    this.time = [ process.hrtime(), all ];
-    return ((diff[0] * 1e9 + diff[1]) / 1000000) / (all - time[1]);
+  var time = this.time;
+  var diff = process.hrtime(time[0]);
+  var all = this.all;
+  this.time = [ process.hrtime(), all ];
+  return ((diff[0] * 1e9 + diff[1]) / 1000000) / (all - time[1]);
 };
 
 /**
@@ -89,10 +89,10 @@ TICKLE.prototype.tpr = function() {
  */
 function tickle(req, res, next) {
 
-    req.tickle = GLOBAL.tickle.add(req.url);
-    if (next) {
-        return next();
-    }
-    return req.tickle;
+  req.tickle = GLOBAL.tickle.add(req.url);
+  if (next) {
+    return next();
+  }
+  return req.tickle;
 }
 module.exports = tickle;
