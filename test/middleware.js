@@ -39,6 +39,10 @@ describe('middleware', function() {
 
       res.send(String(req.tickle));
     });
+    app.get('/admin', function(req, res) {
+
+      res.send(String(global.tickle.tpr()));
+    });
     done();
   });
 
@@ -48,7 +52,17 @@ describe('middleware', function() {
 
       if (err)
         throw err;
-      assert.strictEqual(Number(res.text), 1);
+      assert.equal(Number(res.text), 1);
+      done();
+    });
+  });
+  it('"/admin" - should return `tpr()`', function(done) {
+
+    request(app).get('/admin').expect(200).end(function(err, res) {
+
+      if (err)
+        throw err;
+      assert.equal(isNaN(res.text), false);
       done();
     });
   });
@@ -69,7 +83,7 @@ describe('middleware', function() {
 
         if (err)
           throw err;
-        assert.strictEqual(Number(res.text), 3);
+        assert.equal(Number(res.text), 3);
         done();
       });
     });
@@ -83,7 +97,7 @@ describe('middleware', function() {
 
         if (err)
           throw err;
-        assert.strictEqual(Number(res.text), 5);
+        assert.equal(Number(res.text), 5);
         done();
       });
     });
