@@ -55,9 +55,11 @@ TICKLE.prototype.reset = function() {
  */
 TICKLE.prototype.add = function(path) {
 
-  ++this.all;
-  var plus = ++this.route[path];
-  if (!plus) {
+  this.all++;
+  var plus;
+  if (this.route[path] !== undefined) {
+    plus = ++this.route[path];
+  } else {
     plus = this.route[path] = 1;
   }
   return plus;
@@ -71,10 +73,10 @@ TICKLE.prototype.add = function(path) {
 TICKLE.prototype.tpr = function() {
 
   var time = this.time;
-  var diff = process.hrtime(time[0]);
   var all = this.all;
+  var diff = process.hrtime(time[0]);
   this.time = [ process.hrtime(), all ];
-  return ((diff[0] * 1e9 + diff[1]) / 1000000) / (all - time[1]);
+  return ((diff[0] * 1e9 + diff[1]) / 1e6) / (all - time[1]);
 };
 
 /**
