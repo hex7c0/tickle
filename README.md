@@ -28,25 +28,27 @@ var app = require('express')();
 app.use(tickle);
 ```
 
-Class is stored inside _GLOBAL_ **Object**.
+Class is stored inside _global_ **Object**.
 One istance for environment.
 ```js
-GLOBAL.tickle;
+global.tickle;
 ```
 
 ### Methods
 
 reset all counter
 ```js
-GLOBAL.tickle.reset();
+global.tickle.reset();
 ```
+
 get time per request
 ```js
-GLOBAL.tickle.tpr();
+global.tickle.tpr();
 ```
+
 routing information are stored inside an **Object**
 ```js
-GLOBAL.tickle.route;
+global.tickle.route;
 ```
 
 ## Examples
