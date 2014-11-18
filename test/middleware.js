@@ -68,6 +68,15 @@ describe('middleware', function() {
       done();
     });
   });
+  it('should return "route" Object', function(done) {
+
+    assert.equal(typeof global.tickle.route, 'object');
+    assert.equal(global.tickle.route['/a'], 1);
+    assert.equal(global.tickle.route['/admin'], 1);
+    assert.equal(global.tickle.route['/'], undefined);
+    assert.equal(Object.keys(global.tickle.route).length, 2);
+    done();
+  });
 
   describe('multiple times', function() {
 
@@ -109,13 +118,25 @@ describe('middleware', function() {
         done();
       });
     });
-    it('should return 7 times', function(done) {
+    it('should return "route" Object', function(done) {
+
+      assert.equal(typeof global.tickle.route, 'object');
+      assert.equal(Object.keys(global.tickle.route).length, 3);
+      done();
+    });
+    it('should return 7 times and call `reset()`', function(done) {
 
       assert.equal(global.tickle.all, 7);
       assert.equal(global.tickle.reset(), null);
       done();
     });
-    it('"/admin" - should return `tpr()` after reset', function(done) {
+    it('should return "route" Object after `reset()`', function(done) {
+
+      assert.equal(typeof global.tickle.route, 'object');
+      assert.equal(Object.keys(global.tickle.route).length, 0);
+      done();
+    });
+    it('"/admin" - should return `tpr()` after `reset()`', function(done) {
 
       request(app).get('/admin').expect(200).end(function(err, res) {
 
