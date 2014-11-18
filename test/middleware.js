@@ -73,9 +73,10 @@ describe('middleware', function() {
 
       request(app).get('/').expect(200, done);
     });
-    it('"/" - 2°', function(done) {
+    it('"/" - should return 2 with `add`', function(done) {
 
-      request(app).get('/').expect(200, done);
+      assert.equal(global.tickle.add('/'), 2);
+      done();
     });
     it('"/" - should return 3', function(done) {
 
