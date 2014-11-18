@@ -13,8 +13,8 @@
 /*
  * initialize module
  */
-if (!GLOBAL.tickle) {
-  GLOBAL.tickle = new TICKLE();
+if (!global.tickle) {
+  global.tickle = new TICKLE();
 }
 
 /*
@@ -89,7 +89,7 @@ TICKLE.prototype.tpr = function() {
  */
 function tickle(req, res, next) {
 
-  req.tickle = GLOBAL.tickle.add(req.url);
+  req.tickle = global.tickle.add(req.url);
   if (next) {
     return next();
   }
