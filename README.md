@@ -1,8 +1,9 @@
 # [tickle](http://supergiovane.tk/#/tickle)
 
-[![NPM version](https://badge.fury.io/js/tickle.svg)](http://badge.fury.io/js/tickle)
-[![Build Status](https://travis-ci.org/hex7c0/tickle.svg?branch=master)](https://travis-ci.org/hex7c0/tickle)
-[![Dependency Status](https://david-dm.org/hex7c0/tickle/status.svg)](https://david-dm.org/hex7c0/tickle)
+[![NPM version](https://img.shields.io/npm/v/tickle.svg)](https://www.npmjs.com/package/tickle)
+[![Linux Status](https://img.shields.io/travis/hex7c0/tickle.svg?label=linux)](https://travis-ci.org/hex7c0/tickle)
+[![Windows Status](https://img.shields.io/appveyor/ci/hex7c0/tickle.svg?label=windows)](https://ci.appveyor.com/project/hex7c0/tickle)
+[![Dependency Status](https://img.shields.io/david/hex7c0/tickle.svg)](https://david-dm.org/hex7c0/tickle)
 
 Request counter for [nodejs](http://nodejs.org), independent for every route.
 
@@ -53,6 +54,6 @@ global.tickle.route;
 
 ## Examples
 
-Take a look at my [examples](https://github.com/hex7c0/tickle/tree/master/examples)
+Take a look at my [examples](examples)
 
-### [License GPLv3](http://opensource.org/licenses/GPL-3.0)
+### [License GPLv3](LICENSE)
