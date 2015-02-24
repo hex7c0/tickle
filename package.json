@@ -21,16 +21,12 @@
     "url": "https://github.com/hex7c0/tickle/issues",
     "email": "hex7c0@gmail.com"
   },
-  "main": "index.min.js",
+  "main": "index.js",
   "dependencies": {
   },
   "devDependencies": {
-    "express": "~4.10",
+    "express": "~4.11",
     "mocha": "~2.1",
-    "grunt-contrib-clean": "~0.6",
-    "grunt-contrib-uglify": "~0.7",
-    "grunt-contrib-jshint": "~0.10",
-    "grunt-endline": "~0.2",
     "supertest": "~0.15"
   },
   "engines": {
