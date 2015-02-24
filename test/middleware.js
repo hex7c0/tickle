@@ -2,7 +2,6 @@
 /**
  * @file middleware test
  * @module tickle
- * @package tickle
  * @subpackage test
  * @version 0.0.1
  * @author hex7c0 <hex7c0@gmail.com>
@@ -13,15 +12,10 @@
  * initialize module
  */
 // import
-try {
-  var tickle = require('..'); // use require('tickle')
-  var app = require('express')();
-  var request = require('supertest');
-  var assert = require('assert');
-} catch (MODULE_NOT_FOUND) {
-  console.error(MODULE_NOT_FOUND);
-  process.exit(1);
-}
+var tickle = require('..');
+var app = require('express')();
+var request = require('supertest');
+var assert = require('assert');
 
 /*
  * test module
@@ -30,16 +24,13 @@ describe('middleware', function() {
 
   before(function(done) {
 
-    app.use(tickle);
-    app.get('/', function(req, res) {
+    app.use(tickle).get('/', function(req, res) {
 
       res.send(String(req.tickle));
-    });
-    app.get('/a', function(req, res) {
+    }).get('/a', function(req, res) {
 
       res.send(String(req.tickle));
-    });
-    app.get('/admin', function(req, res) {
+    }).get('/admin', function(req, res) {
 
       res.send(String(global.tickle.tpr()));
     });
@@ -50,8 +41,7 @@ describe('middleware', function() {
 
     request(app).get('/a').expect(200).end(function(err, res) {
 
-      if (err)
-        throw err;
+      if (err) throw err;
       assert.equal(global.tickle.all, 1);
       assert.equal(Number(res.text), 1);
       done();
@@ -61,8 +51,7 @@ describe('middleware', function() {
 
     request(app).get('/admin').expect(200).end(function(err, res) {
 
-      if (err)
-        throw err;
+      if (err) throw err;
       assert.equal(global.tickle.all, 2);
       assert.equal(isNaN(res.text), false);
       done();
@@ -95,8 +84,7 @@ describe('middleware', function() {
 
       request(app).get('/').expect(200).end(function(err, res) {
 
-        if (err)
-          throw err;
+        if (err) throw err;
         assert.equal(global.tickle.all, 5);
         assert.equal(Number(res.text), 3);
         done();
@@ -111,8 +99,7 @@ describe('middleware', function() {
 
       request(app).get('/').expect(200).end(function(err, res) {
 
-        if (err)
-          throw err;
+        if (err) throw err;
         assert.equal(global.tickle.all, 7);
         assert.equal(Number(res.text), 5);
         done();
@@ -140,8 +127,7 @@ describe('middleware', function() {
 
       request(app).get('/admin').expect(200).end(function(err, res) {
 
-        if (err)
-          throw err;
+        if (err) throw err;
         assert.equal(global.tickle.all, 1);
         assert.equal(isNaN(res.text), false);
         done();

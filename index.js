@@ -2,7 +2,6 @@
 /**
  * @file tickle main
  * @module tickle
- * @package tickle
  * @subpackage main
  * @version 1.1.0
  * @author hex7c0 <hex7c0@gmail.com>
@@ -14,7 +13,7 @@
  * initialize module
  */
 if (!global.tickle) {
-  global.tickle = new TICKLE();
+  global.tickle = new Tickle();
 }
 
 /*
@@ -23,9 +22,9 @@ if (!global.tickle) {
 /**
  * tickle class
  * 
- * @class TICKLE
+ * @class Tickle
  */
-function TICKLE() {
+function Tickle() {
 
   this.all = 0;
   this.time = [ process.hrtime(), 0 ];
@@ -37,12 +36,13 @@ function TICKLE() {
  * 
  * @function reset
  */
-TICKLE.prototype.reset = function() {
+Tickle.prototype.reset = function() {
 
   this.all = 0;
   this.route = Object.create(null);
   return;
 };
+
 /**
  * increase counter
  * 
@@ -50,7 +50,7 @@ TICKLE.prototype.reset = function() {
  * @param {String} path - url path
  * @return {Integer}
  */
-TICKLE.prototype.add = function(path) {
+Tickle.prototype.add = function(path) {
 
   this.all++;
   var plus;
@@ -61,13 +61,14 @@ TICKLE.prototype.add = function(path) {
   }
   return plus;
 };
+
 /**
  * time per request
  * 
  * @function tpr
  * @return {Float}
  */
-TICKLE.prototype.tpr = function() {
+Tickle.prototype.tpr = function() {
 
   var time = this.time;
   var all = this.all;
