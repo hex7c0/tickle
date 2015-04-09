@@ -1,11 +1,12 @@
-# [tickle](http://supergiovane.tk/#/tickle)
+# [REPLACE](http://supergiovane.tk/#/REPLACE)
 
-[![NPM version](https://img.shields.io/npm/v/tickle.svg)](https://www.npmjs.com/package/tickle)
-[![Linux Status](https://img.shields.io/travis/hex7c0/tickle.svg?label=linux)](https://travis-ci.org/hex7c0/tickle)
-[![Windows Status](https://img.shields.io/appveyor/ci/hex7c0/tickle.svg?label=windows)](https://ci.appveyor.com/project/hex7c0/tickle)
-[![Dependency Status](https://img.shields.io/david/hex7c0/tickle.svg)](https://david-dm.org/hex7c0/tickle)
+[![NPM version](https://img.shields.io/npm/v/REPLACE.svg)](https://www.npmjs.com/package/REPLACE)
+[![Linux Status](https://img.shields.io/travis/hex7c0/REPLACE.svg?label=linux)](https://travis-ci.org/hex7c0/REPLACE)
+[![Windows Status](https://img.shields.io/appveyor/ci/hex7c0/REPLACE.svg?label=windows)](https://ci.appveyor.com/project/hex7c0/REPLACE)
+[![Dependency Status](https://img.shields.io/david/hex7c0/REPLACE.svg)](https://david-dm.org/hex7c0/REPLACE)
+[![Coveralls](https://img.shields.io/coveralls/hex7c0/REPLACE.svg)](https://coveralls.io/r/hex7c0/REPLACE)
 
-Request counter for [nodejs](http://nodejs.org), independent for every route.
+Request counter for [nodejs](http://nodejs.org), independent for every route
 
 ## Installation
 
@@ -24,6 +25,7 @@ git clone git://github.com/hex7c0/tickle.git
 inside expressjs project
 ```js
 var tickle = require('tickle');
+
 var app = require('express')();
 
 app.use(tickle);
