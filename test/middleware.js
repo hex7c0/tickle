@@ -11,7 +11,6 @@
 /*
  * initialize module
  */
-// import
 var tickle = require('..');
 var app = require('express')();
 var request = require('supertest');
@@ -36,7 +35,6 @@ describe('middleware', function() {
     });
     done();
   });
-
   it('"/a" - should return 1', function(done) {
 
     request(app).get('/a').expect(200).end(function(err, res) {
