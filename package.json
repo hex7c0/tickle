@@ -26,10 +26,10 @@
   },
   "devDependencies": {
     "coveralls": "~2.11",
-    "express": "~4.12",
+    "express": "~4.13",
     "istanbul": "~0.3",
     "mocha": "~2.2",
-    "supertest": "~0.15"
+    "supertest": "~1.0"
   },
   "engines": {
     "node": ">=0.10"
