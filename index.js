@@ -52,7 +52,7 @@ Tickle.prototype.reset = function() {
  */
 Tickle.prototype.add = function(path) {
 
-  this.all++;
+  ++this.all;
   var plus;
   if (this.route[path] !== undefined) {
     plus = ++this.route[path];
