@@ -1,6 +1,6 @@
 'use strict';
 /**
- * @file express example
+ * @file single example
  * @module tickle
  * @subpackage examples
  * @version 0.0.1
@@ -14,8 +14,7 @@
 var tickle = require('..'); // use require('tickle') instead
 var app = require('express')();
 
-// express routing
-app.get('/', tickle, function(req, res) {
+app.get('/', tickle, function(req, res) { // express routing
 
   res.send('counter=' + req.tickle);
 }).get('/admin', function(req, res) {

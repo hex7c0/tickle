@@ -14,10 +14,9 @@
 var tickle = require('..'); // use require('tickle') instead
 var app = require('express')();
 
-app.use(tickle); // use like middleware
+app.use(tickle); // using middleware
 
-// express routing
-app.get('/', function(req, res) {
+app.get('/', function(req, res) { // express routing
 
   res.send('counter=' + req.tickle);
 }).get('/admin', function(req, res) {
