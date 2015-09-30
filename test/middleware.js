@@ -35,11 +35,12 @@ describe('middleware', function() {
     });
     done();
   });
+
   it('"/a" - should return 1', function(done) {
 
     request(app).get('/a').expect(200).end(function(err, res) {
 
-      if (err) throw err;
+      assert.ifError(err);
       assert.equal(global.tickle.all, 1);
       assert.equal(Number(res.text), 1);
       done();
@@ -49,7 +50,7 @@ describe('middleware', function() {
 
     request(app).get('/admin').expect(200).end(function(err, res) {
 
-      if (err) throw err;
+      assert.ifError(err);
       assert.equal(global.tickle.all, 2);
       assert.equal(isNaN(res.text), false);
       done();
@@ -82,7 +83,7 @@ describe('middleware', function() {
 
       request(app).get('/').expect(200).end(function(err, res) {
 
-        if (err) throw err;
+        assert.ifError(err);
         assert.equal(global.tickle.all, 5);
         assert.equal(Number(res.text), 3);
         done();
@@ -97,7 +98,7 @@ describe('middleware', function() {
 
       request(app).get('/').expect(200).end(function(err, res) {
 
-        if (err) throw err;
+        assert.ifError(err);
         assert.equal(global.tickle.all, 7);
         assert.equal(Number(res.text), 5);
         done();
@@ -125,7 +126,7 @@ describe('middleware', function() {
 
       request(app).get('/admin').expect(200).end(function(err, res) {
 
-        if (err) throw err;
+        assert.ifError(err);
         assert.equal(global.tickle.all, 1);
         assert.equal(isNaN(res.text), false);
         done();
