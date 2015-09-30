@@ -1,5 +1,5 @@
 {
-  "version": "1.2.1",
+  "version": "1.2.2",
   "name": "tickle",
   "description": "request counter",
   "keywords": [
@@ -7,7 +7,7 @@
     "request"
   ],
   "preferGlobal": false,
-  "homepage": "http://supergiovane.tk/#/tickle",
+  "homepage": "https://github.com/hex7c0/tickle",
   "author": {
     "name": "hex7c0",
     "email": "hex7c0@gmail.com",

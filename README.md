@@ -1,4 +1,4 @@
-# [tickle](http://supergiovane.tk/#/tickle)
+# [tickle](https://github.com/hex7c0/tickle)
 
 [![NPM version](https://img.shields.io/npm/v/tickle.svg)](https://www.npmjs.com/package/tickle)
 [![Linux Status](https://img.shields.io/travis/hex7c0/tickle.svg?label=linux)](https://travis-ci.org/hex7c0/tickle)
