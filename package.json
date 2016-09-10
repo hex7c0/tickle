@@ -11,7 +11,7 @@
   "author": {
     "name": "hex7c0",
     "email": "hex7c0@gmail.com",
-    "url": "http://hex7c0.tk/"
+    "url": "https://hex7c0.github.io/"
   },
   "repository": {
     "type": "git",
@@ -25,11 +25,10 @@
   "dependencies": {
   },
   "devDependencies": {
-    "coveralls": "~2.11",
-    "express": "~4.13",
+    "express": "~4.14",
     "istanbul": "~0.4",
-    "mocha": "~2.3",
-    "supertest": "~1.1"
+    "mocha": "~3.0",
+    "supertest": "~2.0"
   },
   "engines": {
     "node": ">=0.10"
