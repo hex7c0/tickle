@@ -27,8 +27,8 @@
   "devDependencies": {
     "express": "~4.14",
     "istanbul": "~0.4",
-    "mocha": "~3.0",
-    "supertest": "~2.0"
+    "mocha": "~3.2",
+    "supertest": "~3.0"
   },
   "engines": {
     "node": ">=4.0"
