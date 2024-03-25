@@ -24,9 +24,9 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "express": "~4.16",
+    "express": "~4.19",
     "istanbul": "~0.4",
-    "mocha": "~4.1",
+    "mocha": "~10.3",
     "supertest": "~3.0"
   },
   "engines": {
